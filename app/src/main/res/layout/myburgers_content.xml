@@ -44,25 +44,25 @@
             android:id="@+id/button5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Burger 1" />
+            android:text="waffle" />
 
         <Button
             android:id="@+id/button10"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Burger 2" />
+            android:text="salted caramel" />
 
         <Button
             android:id="@+id/button12"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Burger 3" />
+            android:text="gelato" />
 
         <Button
             android:id="@+id/button13"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Burger 4" />
+            android:text="white choc" />
     </LinearLayout>
 
 </LinearLayout>

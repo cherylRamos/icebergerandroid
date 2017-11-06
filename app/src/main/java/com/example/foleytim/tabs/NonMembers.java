@@ -55,7 +55,7 @@ public class NonMembers extends AppCompatActivity {
         myBurgers.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                setContentView(R.layout.myburgers);
+                setContentView(R.layout.myburgers_content);
                 //     setContentView(R.layout.m);
             }
 

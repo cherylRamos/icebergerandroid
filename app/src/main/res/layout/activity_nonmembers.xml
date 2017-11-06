@@ -20,7 +20,7 @@
             android:layout_alignParentTop="true"
             android:background="@color/colorAccent"
             android:fontFamily="sans-serif"
-            android:text="Log In" />
+            android:text="Log In/ Sign Up" />
     </LinearLayout>
 
     <LinearLayout

@@ -39,7 +39,7 @@ ImageView logo;
         newOrders.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                setContentView(R.layout.menu);
+                setContentView(R.layout.mainmenu);
             }
 
         });

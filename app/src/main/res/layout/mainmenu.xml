@@ -20,7 +20,7 @@
             android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
 
         <ImageButton
-            android:id="@+id/imageButton6"
+            android:id="@+id/mainMenuHome"
             android:layout_width="15dp"
             android:layout_height="match_parent"
             android:layout_weight="1"

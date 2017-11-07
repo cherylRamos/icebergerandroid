@@ -27,10 +27,11 @@
             android:textStyle="bold" />
 
         <ImageButton
-            android:id="@+id/imageButton7"
-            android:layout_width="50dp"
-            android:layout_height="match_parent"
+            android:id="@+id/myburgers_contentHome"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
             android:layout_weight="0"
+            android:scaleType="fitXY"
             app:srcCompat="@drawable/icebergerlogo" />
     </LinearLayout>
 
@@ -63,6 +64,36 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="white choc" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/myburgercontentAddToCart"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/cart" />
+
+        <TextView
+            android:id="@+id/myBurgerContentTotal"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:text="Total : $$.$$"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+
+        <Button
+            android:id="@+id/myBurgerContentCheckOut"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:text="Check Out" />
     </LinearLayout>
 
 </LinearLayout>

@@ -45,12 +45,14 @@
             android:id="@+id/logInOk"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:backgroundTint="@color/colorAccent"
             android:text="Log In" />
 
         <Button
-            android:id="@+id/LogInSignUp"
+            android:id="@+id/signUp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:backgroundTint="@color/colorAccent"
             android:text="Sign Up" />
 
     </LinearLayout>

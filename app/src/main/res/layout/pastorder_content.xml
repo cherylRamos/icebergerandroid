@@ -15,15 +15,18 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Order # / Name"
-            android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+            android:backgroundTint="@color/colorAccent"
+            android:text="Order # 1"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            android:textColorHighlight="@color/colorAccent" />
 
         <ImageButton
-            android:id="@+id/imageButton4"
-            android:layout_width="wrap_content"
+            android:id="@+id/pastOrderContentHome"
+            android:layout_width="100dp"
             android:layout_height="50dp"
             android:layout_weight="1"
-            app:srcCompat="@drawable/back" />
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/icebergerlogo" />
     </LinearLayout>
 
     <LinearLayout
@@ -31,19 +34,58 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <Button
-            android:id="@+id/pastorderlistb1"
+        <TextView
+            android:id="@+id/textView24"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/colorAccent"
-            android:text="Supercharged burger" />
+            android:text="Aloha Burger"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
 
-        <Button
-            android:id="@+id/pastorderlistb2"
+        <TextView
+            android:id="@+id/textView25"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/colorAccent"
-            android:text="Aloha Burger" />
+            android:text="Milkshake"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
 
+        <TextView
+            android:id="@+id/textView26"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Waffle"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/pastOrderContentCart"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/cart" />
+
+        <TextView
+            android:id="@+id/pastorderTotal"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:text="Total : $$.$$"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+
+        <Button
+            android:id="@+id/pastorderContentCheckOut"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/colorAccent"
+            android:text="Check Out" />
     </LinearLayout>
 </LinearLayout>

@@ -11,7 +11,7 @@
         android:orientation="horizontal">
 
         <ImageButton
-            android:id="@+id/imageButton"
+            android:id="@+id/checkoutBack"
             android:layout_width="wrap_content"
             android:layout_height="40dp"
             android:layout_weight="1"
@@ -27,7 +27,7 @@
             android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
 
         <ImageView
-            android:id="@+id/imageView7"
+            android:id="@+id/checkoutHome"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_weight="1"
@@ -54,7 +54,7 @@
             android:textSize="24sp" />
 
         <Button
-            android:id="@+id/checkoutOk"
+            android:id="@+id/checkoutPay"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/colorAccent"

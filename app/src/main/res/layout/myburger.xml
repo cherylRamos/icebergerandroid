@@ -42,6 +42,14 @@
             android:layout_height="wrap_content"
             android:text="Tap a burger to view its components"
             android:textAlignment="center" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/myburger_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
 
         <Button
             android:id="@+id/myburgeraddb1"
@@ -65,7 +73,7 @@
             android:text="Burger3" />
 
         <ListView
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="350dp">
 
         </ListView>

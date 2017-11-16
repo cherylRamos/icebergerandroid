@@ -2,7 +2,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#D67DB3">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -14,6 +15,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/colorAccent"
+            android:fontFamily="cursive"
             android:text="PAYMENT"
             android:textAlignment="center"
             android:textSize="30sp" />
@@ -103,7 +105,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:backgroundTint="@color/colorAccent"
+                android:background="#F9F9E0"
+                android:textAllCaps="false"
                 android:text="Pay" />
         </LinearLayout>
 
@@ -117,6 +120,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/colorAccent"
+                android:fontFamily="cursive"
                 android:text="Pay On Pick Up"
                 android:textAlignment="center"
                 android:textSize="30sp" />
@@ -139,7 +143,8 @@
                 android:id="@+id/payByCash"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:backgroundTint="@color/colorAccent"
+                android:background="#F9F9E0"
+                android:textAllCaps="false"
                 android:text="Pay on Pick Up" />
         </LinearLayout>
 

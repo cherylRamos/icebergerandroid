@@ -14,7 +14,7 @@ import java.net.URLConnection;
 public class JSONGrabber extends AsyncTask<String, Void, JSONObject> {
     public JSONGrabber(String url) {
         super();
-        this.execute("http://10.140.124.121/iceberger_backend/api.php?" + url);
+        this.execute("http://iceberger.ey.nz/api.php?" + url);
     }
 
     @Override

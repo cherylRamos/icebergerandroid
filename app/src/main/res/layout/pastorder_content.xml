@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#D67DB3"
     android:orientation="vertical">
 
     <LinearLayout
@@ -14,15 +15,17 @@
             android:id="@+id/textView20"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_margin="5dp"
             android:layout_weight="1"
             android:backgroundTint="@color/colorAccent"
+            android:fontFamily="cursive"
             android:text="Order # 1"
             android:textAppearance="@style/TextAppearance.AppCompat.Display1"
             android:textColorHighlight="@color/colorAccent" />
 
         <ImageButton
             android:id="@+id/pastOrderContentHome"
-            android:layout_width="100dp"
+            android:layout_width="80dp"
             android:layout_height="50dp"
             android:layout_weight="1"
             android:scaleType="fitXY"
@@ -59,33 +62,32 @@
             android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
 
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="0"
         android:orientation="horizontal">
 
-        <ImageButton
-            android:id="@+id/pastOrderContentCart"
-            android:layout_width="wrap_content"
-            android:layout_height="50dp"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/cart" />
-
         <TextView
             android:id="@+id/pastorderTotal"
             android:layout_width="wrap_content"
             android:layout_height="50dp"
+            android:layout_margin="5dp"
             android:layout_weight="1"
             android:text="Total : $$.$$"
+            android:textAlignment="center"
             android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
 
         <Button
             android:id="@+id/pastorderContentCheckOut"
             android:layout_width="wrap_content"
             android:layout_height="50dp"
+            android:layout_margin="5dp"
             android:layout_weight="1"
-            android:backgroundTint="@color/colorAccent"
-            android:text="Check Out" />
+            android:background="#F9F9E0"
+            android:fontFamily="sans-serif"
+            android:text="Check Out"
+            android:textAllCaps="false" />
     </LinearLayout>
 </LinearLayout>

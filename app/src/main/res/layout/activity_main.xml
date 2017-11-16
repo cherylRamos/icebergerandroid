@@ -4,63 +4,66 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#D67DB3"
     tools:context="com.example.foleytim.tabs.MainActivity">
 
     <Button
         android:id="@+id/signOut"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentTop="true"
-        android:background="@color/colorAccent"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp"
+        android:background="#F9F9E0"
         android:fontFamily="sans-serif"
-        android:text="Sign Out" />
+        android:text="Sign Out"
+        android:textAllCaps="false" />
 
     <Button
         android:id="@+id/pastOrders"
-        android:layout_width="250dp"
+        android:layout_width="300dp"
         android:layout_height="60dp"
         android:layout_above="@+id/myBurgers"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentStart="true"
-        android:background="@color/colorAccent"
-        android:fontFamily="cursive"
-        android:text="PAST ORDERS"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="5dp"
+        android:background="#F9F9E0"
+        android:fontFamily="sans-serif"
+        android:paddingHorizontal="10dp"
+        android:text="Past Order"
+        android:textAllCaps="false"
         android:textSize="25sp"
         tools:layout_editor_absoluteX="147dp"
         tools:layout_editor_absoluteY="303dp" />
 
     <Button
         android:id="@+id/newOrders"
-        android:layout_width="250dp"
+        android:layout_width="300dp"
         android:layout_height="60dp"
         android:layout_above="@+id/pastOrders"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentStart="true"
-        android:background="@color/colorAccent"
-        android:fontFamily="cursive"
-        android:text="NEW ORDER"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="5dp"
+        android:background="#F9F9E0"
+        android:fontFamily="sans-serif"
+        android:paddingHorizontal="10dp"
+        android:text="New Order"
+        android:textAllCaps="false"
         android:textSize="25sp"
         tools:layout_editor_absoluteX="147dp"
         tools:layout_editor_absoluteY="303dp" />
 
     <Button
         android:id="@+id/myBurgers"
-        android:layout_width="250dp"
+        android:layout_width="300dp"
         android:layout_height="60dp"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentStart="true"
-        android:background="@color/colorAccent"
-        android:fontFamily="cursive"
-        android:text="MY Burgers"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="5dp"
+        android:background="#F9F9E0"
+        android:fontFamily="sans-serif"
+        android:paddingHorizontal="10dp"
+        android:text="My Burgers"
+        android:textAllCaps="false"
         android:textSize="25sp" />
 
     <ImageView
@@ -70,6 +73,6 @@
         android:layout_above="@+id/newOrders"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        app:srcCompat="@drawable/logo" />
+        app:srcCompat="@drawable/icebergerlogo" />
 
 </RelativeLayout>

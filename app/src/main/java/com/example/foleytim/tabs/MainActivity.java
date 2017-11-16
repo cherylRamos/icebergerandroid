@@ -18,6 +18,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -29,9 +30,10 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLConnection;
+import android.content.SharedPreferences;
 
 public class MainActivity extends AppCompatActivity {
-    Button signOut, pastOrders, newOrders, myBurgers, signUp, signUpOk, paymentViaCard, payByCash, successHome,bybAddName;
+    Button signOut, pastOrders, newOrders, myBurgers, signUp, signUpOk, paymentViaCard, payByCash, successHome,bybAddName,bybCreateBurger;
     Button pastOrderb1, myburgeraddb1, checkoutPay, mainmenuCreateBurger, mainmenuCheckout, bybCheckOut, pastorderCheckOut;
     ImageButton pastOrderHome, mainMenuHome, myBurgerHome, myburgercontentAddToCart, pastOrderContentHome;
     ImageButton checkoutCart, myburgers_contentHome, mainmenuCart, bybAddToCart, buildyourburgerback;
@@ -39,18 +41,24 @@ public class MainActivity extends AppCompatActivity {
     Button signUpCancel, SignUpOk, logInOk, newOrder, nonmembersLogIn, myBurgerContentCheckOut, pastorderb2, pastorderContentCheckOut;
     ImageView logo, checkoutHome, logInSignUpHome;
     EditText bybName;
+    TextView myBurgerContentTotal;
     private SectionsPageAdapter mSectionsPageAdapter;
     private SectionsPageAdapter mSectionsPageAdapter2;
     private SectionsPageAdapter mSectionsPageAdapter3;
     private ViewPager mViewPager;
     private ViewPager mViewPager2;
     private ViewPager mViewPager3;
-    private static final  String keyString = "myKey";
+
+    static SharedPreferences sp;
+    private static final  String  keyString = "myKey";
     TextView ntxt;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         showNonMembersMenu();
+        sp=getSharedPreferences("cartSession",MODE_PRIVATE);
+
+
     }
 
     public void showMain() {
@@ -105,7 +113,7 @@ public class MainActivity extends AppCompatActivity {
 
         setContentView(R.layout.mainmenu);
         mainmenuCreateBurger = (Button) findViewById(R.id.mainmenuCreateBurger);
-        mainmenuCart = (ImageButton) findViewById(R.id.mainmenuCart);
+       // mainmenuCart = (ImageButton) findViewById(R.id.mainmenuCart);
         mainmenuCheckout = (Button) findViewById(R.id.mainmenuCheckout);
         mainmenuHome = (ImageButton) findViewById(R.id.mainmenuHome);
         mSectionsPageAdapter = new SectionsPageAdapter(getSupportFragmentManager());
@@ -118,13 +126,13 @@ public class MainActivity extends AppCompatActivity {
             }
 
         });
-        mainmenuCart.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                //     add to cart
-            }
-
-        });
+      //  mainmenuCart.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                //     add to cart
+//            }
+//
+//        });
         mainmenuCheckout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -203,22 +211,40 @@ public class MainActivity extends AppCompatActivity {
             }
 
         });
-//       // final   View view= new view;
-//        new JSONGrabber("method=getinventory") {
+//        final View view = new View(View view) ;
+//        // final TextView subtotal;
+//        final String itemcost="0";
+//        new JSONGrabber("method=getburgers") {
 //            protected void onPostExecute(JSONObject jsonObject) {
 //                try {
 //                    JSONArray arr = (JSONArray) jsonObject.get("inventory");
 //                    JSONObject cat = (JSONObject) arr.get(0);
 //                    JSONArray items = (JSONArray) cat.get("items");
-//                    LinearLayout list = view.findViewById(R.id.drinks_list);
+//                    LinearLayout list = view.findViewById(R.id.myburger_list);
 //                    list.removeAllViews();
 //                    for(int i = 0; i < items.length(); ++i) {
-//                        JSONObject item = (JSONObject)items.get(i);
+//                        final JSONObject item = (JSONObject)items.get(i);
+//
+//
 //
 //                        Button btn = new Button(view.getContext());
+//                        TextView subtotal= new TextView(view.getContext());
 //                        btn.setText((String)item.get("name")+"  $"+(String)item.get("cost"));
 //
+//
+//
+//
 //                        list.addView(btn);
+//
+//
+//                        btn.setOnClickListener(new View.OnClickListener() {
+//
+//                            @Override
+//                            public void onClick(View view) {
+//                                //myBurgerContentTotal.setText = "2.00";
+//                                Cart.addToCart(item);
+//                            }
+//                        });
 //
 //                        Log.d("LOGCAT", item.toString());
 //                    }
@@ -274,7 +300,7 @@ nonmembersLogIn.setOnClickListener(new View.OnClickListener() {
     public void showPastOrder_content() {
         setContentView(R.layout.pastorder_content);
         pastOrderContentHome = (ImageButton) findViewById(R.id.pastOrderContentHome);
-        pastOrderContentCart = (ImageButton) findViewById(R.id.pastOrderContentCart);
+       // pastOrderContentCart = (ImageButton) findViewById(R.id.pastOrderContentCart);
         pastorderContentCheckOut = (Button) findViewById(R.id.pastorderContentCheckOut);
         pastorderContentCheckOut.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -307,10 +333,12 @@ nonmembersLogIn.setOnClickListener(new View.OnClickListener() {
         setContentView(R.layout.buildyourburger);
 
         bybCheckOut = (Button) findViewById(R.id.bybCheckOut);
-        bybAddToCart = (ImageButton) findViewById(R.id.bybAddToCart);
+        //bybAddToCart = (ImageButton) findViewById(R.id.bybAddToCart);
+        bybCreateBurger = (Button)findViewById(R.id.bybCreateBurger);
         bybHome = (ImageButton) findViewById(R.id.bybHome);
-        bybAddName = (Button)findViewById(R.id.bybAddName);
-        bybName = (EditText)findViewById(R.id.bybName);
+
+       // bybName = (EditText)findViewById(R.id.bybName);
+
         bybCheckOut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -318,13 +346,13 @@ nonmembersLogIn.setOnClickListener(new View.OnClickListener() {
             }
 
         });
-        bybAddToCart.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                //addtocart
-            }
-
-        });
+//        bybAddToCart.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                //addtocart
+//            }
+//
+//        });
         bybHome.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -332,10 +360,18 @@ nonmembersLogIn.setOnClickListener(new View.OnClickListener() {
             }
 
         });
-        bybAddName.setOnClickListener(new View.OnClickListener() {
+//        bybAddName.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                //addburger name
+//            }
+//
+//        });
+        bybCreateBurger.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //addburger name
+                //create burger
+
             }
 
         });
@@ -348,8 +384,15 @@ nonmembersLogIn.setOnClickListener(new View.OnClickListener() {
         tabLayout2.setupWithViewPager(mViewPager2);
     }
 
+    public void updateTotalTextView() {
+        myBurgerContentTotal = (TextView)findViewById(R.id.myBurgerContentTotal);
+        String totalString = sp.getString("cart_total","");
+        myBurgerContentTotal.setText(totalString+"hello");
+    }
+
     private void setupViewPager2(ViewPager viewPager2) {
         SectionsPageAdapter2 adapter2 = new SectionsPageAdapter2(getSupportFragmentManager());
+
         adapter2.addFragment(new BunFragment(), "Bun");
         adapter2.addFragment(new iceCreamFragment(), "Ice Cream");
         adapter2.addFragment(new fillingFragment(), "Filling");
@@ -435,15 +478,15 @@ nonmembersLogIn.setOnClickListener(new View.OnClickListener() {
 
         setContentView(R.layout.myburgers_content);
         myburgers_contentHome = (ImageButton) findViewById(R.id.myburgers_contentHome);
-        myburgercontentAddToCart = (ImageButton) findViewById(R.id.myburgercontentAddToCart);
+       // myburgercontentAddToCart = (ImageButton) findViewById(R.id.myburgercontentAddToCart);
         myBurgerContentCheckOut = (Button) findViewById(R.id.myBurgerContentCheckOut);
-        myburgercontentAddToCart.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                // showPayment();
-            }
-
-        });
+//        myburgercontentAddToCart.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                // showPayment();
+//            }
+//
+//        });
         myburgers_contentHome.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -576,6 +619,10 @@ nonmembersLogIn.setOnClickListener(new View.OnClickListener() {
         state.putString(keyString,ntxt.getText().toString() );
         super.onSaveInstanceState(state);
 //        bundle.saveState(state);
+    }
+    public void onBackPressed() {
+        // code here to show dialog
+        super.onBackPressed(); // optional depending on your needs
     }
    }
 

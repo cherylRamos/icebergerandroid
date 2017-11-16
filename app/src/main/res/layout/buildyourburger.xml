@@ -9,11 +9,11 @@
     tools:context=".MainActivity">
 
 
-
     <android.support.design.widget.AppBarLayout
         android:id="@+id/appbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="#D67DB3"
         android:paddingTop="@dimen/appbar_padding_top"
         android:theme="@style/AppTheme.AppBarOverlay">
 
@@ -28,6 +28,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="50dp"
                 android:layout_weight="1"
+                android:fontFamily="cursive"
                 android:text="Build Your Own Burger"
                 android:textAlignment="center"
                 android:textAppearance="@style/TextAppearance.AppCompat.Headline" />
@@ -58,12 +59,16 @@
                 android:inputType="textPersonName" />
 
             <Button
-                android:id="@+id/bybAddName"
-                android:layout_width="55dp"
+                android:id="@+id/bybCreateBurger"
+                android:layout_width="120dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:backgroundTint="@color/colorAccent"
-                android:text="Add" />
+                android:layout_marginRight="5dp"
+                android:layout_weight="0"
+                android:background="#F9F9E0"
+                android:fontFamily="#F9F9E0"
+                android:text="Add Burger"
+                android:textAllCaps="false" />
+
         </LinearLayout>
 
         <LinearLayout
@@ -72,31 +77,35 @@
             android:layout_weight="0"
             android:orientation="horizontal">
 
-            <ImageButton
-                android:id="@+id/bybAddToCart"
+            <TextView
+                android:id="@+id/textView21"
                 android:layout_width="wrap_content"
-                android:layout_height="50dp"
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
-                app:srcCompat="@drawable/cart" />
+                android:fontFamily="sans-serif"
+                android:text="Total: "
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
 
             <TextView
                 android:id="@+id/myBurgerContentTotal"
                 android:layout_width="wrap_content"
                 android:layout_height="50dp"
                 android:layout_weight="1"
-                android:text="Total : $$.$$"
+                android:text="0.0"
                 android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
 
 
             <Button
                 android:id="@+id/bybCheckOut"
-                android:layout_width="wrap_content"
+                android:layout_width="120dp"
                 android:layout_height="55dp"
-                android:layout_weight="1"
-                android:backgroundTint="@color/colorAccent"
-                android:text="Check Out" />
+                android:layout_marginRight="5dp"
+                android:layout_weight="0"
+                android:background="#F9F9E0"
+                android:text="Check Out"
+                android:textAllCaps="false" />
         </LinearLayout>
-
 
 
         <android.support.design.widget.TabLayout
@@ -117,7 +126,7 @@
             <android.support.design.widget.TabItem
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Filling" />
+                android:text="Sprinkles" />
 
             <android.support.design.widget.TabItem
                 android:layout_width="wrap_content"
@@ -130,6 +139,7 @@
         android:id="@+id/container2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="#D67DB3"
         app:layout_behavior="@string/appbar_scrolling_view_behavior" />
 
 

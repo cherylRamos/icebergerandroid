@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#D67DB3"
     android:orientation="vertical">
 
     <LinearLayout
@@ -20,7 +21,8 @@
                 android:layout_width="550dp"
                 android:layout_height="50dp"
                 android:layout_weight="1"
-                android:text="PAST ORDERS"
+                android:fontFamily="cursive"
+                android:text="Past Orders"
                 android:textAlignment="center"
                 android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
 
@@ -52,21 +54,24 @@
             android:id="@+id/pastOrderb1"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:backgroundTint="@color/colorAccent"
+            android:layout_margin="5dp"
+            android:background="#F9F9E0"
             android:text="Order #1" />
 
         <Button
             android:id="@+id/pastorderb2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/colorAccent"
+            android:layout_margin="5dp"
+            android:background="#F9F9E0"
             android:text="order #2 " />
 
         <Button
             android:id="@+id/pastorderb3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/colorAccent"
+            android:layout_margin="5dp"
+            android:background="#F9F9E0"
             android:text="Order #3 " />
 
     </LinearLayout>

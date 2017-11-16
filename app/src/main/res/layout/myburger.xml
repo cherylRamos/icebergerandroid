@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#D67DB3"
     android:orientation="vertical">
 
     <LinearLayout
@@ -17,7 +18,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="MY BURGERS"
+            android:fontFamily="cursive"
+            android:text="My Burgers"
             android:textAlignment="center"
             android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
 
@@ -33,15 +35,17 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:orientation="vertical">
+        android:layout_marginLeft="70dp"
+        android:layout_weight="0"
+        android:orientation="vertical"
+        android:textAlignment="center">
 
         <TextView
             android:id="@+id/textView19"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Tap a burger to view its components"
-            android:textAlignment="center" />
+            android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
     </LinearLayout>
 
     <LinearLayout
@@ -55,21 +59,24 @@
             android:id="@+id/myburgeraddb1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/colorAccent"
+            android:layout_margin="5dp"
+            android:background="#F9F9E0"
             android:text="Burger 1" />
 
         <Button
             android:id="@+id/mybyrgeraddb2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/colorAccent"
+            android:layout_margin="5dp"
+            android:background="#F9F9E0"
             android:text="Burger2" />
 
         <Button
             android:id="@+id/myburgerb3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/colorAccent"
+            android:layout_margin="5dp"
+            android:background="#F9F9E0"
             android:text="Burger3" />
 
         <ListView
